@@ -1,0 +1,23 @@
+server:
+  port: 8004
+
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: service-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+    #注册到服务中心
+    nacos:
+      discovery:
+        server-addr: 47.106.187.129:8848
+      config:
+        server-addr: 47.106.187.129:8848
+        file-extension: yaml
